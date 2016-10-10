@@ -7,50 +7,35 @@ using namespace std;
 
 int main () 
 {
-    int randNum0_3=0;
-    string userText;
-    
-    cout << "I'm looking for a new friend. Will it be you?" << endl;
-    cout << "You can type \"quit\" when you want to leave." << endl;
-    cout <">";
-    
-    getline(cin, userText);
-    
-    while (userText!="quit")
-    {
-        randNum0_3=userText.length()%4;
-        switch (randNum0_3)
+   string printTime;
+   unsigned int i=0;
+   char currChar='_';
+   
+   cout << "Enter print time: " << endl;
+   cin >> printTime;
+   cout << endl;
+   
+   cout << "Print only: ";
+   for (i = 0, i < printTime.size(); ++i)
+   {
+       currChar = printTime.at(i);
+       if (((currChar >= '0') &&  (currChar<='9') || (currChar == '-'))
+       {
+           cout << currChar;
+       }
+       else if ( ((currChar >= '1:00') && (currChar <= '2:59' )) ||
+                 ((currChar >= '1:00 pm') && (currChar <= '2:59 pm')) )
+                 {
+                     cout << "15 minutes";
+                 }
+        else 
         {
-            case 0:
-            cout << endl << "Please explain further." << endl << endl;
-            cout << ">";
-            break;
-            
-            case 1:
-            cout << endl << "Why do you say: \"" << userText << "\"?" << endl << endl;
-            cout << ">";
-            break;
-            
-            case 2:
-            cout << endl << "I think that's not right." << endl << endl;
-            cout << ">";
-            break;
-            
-            case 3:
-            cout << endl << "Anything else you wanna tell me?" << endl << endl;
-            cout << ">";
-            break;
-            
-            default:
-            cout << endl << "Something happened that shouldn't. Please with for a second then try again." << endl << endl;
+            cout << '?';
+            cout << endl;
         }
-        
-    getline(cin, userText);
-    
-    }
-    
-    cout << endl << "Oh, you're leaving now? Okay, it was nice to meet you!" << endl << endl;
-    cout << endl << "We should do this again sometime! Good bye! Have a great day!" << endl << endl;
-    
+   }
+   
+   cout << endl;
+   
     return 0;
 }
