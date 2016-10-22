@@ -1,7 +1,6 @@
 //Mary Dalke
-//10-18-16
-//This program will be a game of rock, paper, scissors between
-//the computer and gamer.
+//10-20-16
+//This program will be a game of rock, paper, scissors between two gamers.
 
 #include <iostream>
 #include <string>
@@ -9,18 +8,26 @@ using namespace std;
 
 class FunGame
 {
-    public:
-    void SetGame (int userGames);
-    void int ComputerRoll (string computerChoose);
-    
-    private:
-    int userGames;
-    string computerChoose;
+  public:
+  void SetGame (int userGamer);
+  void int SetGamer1 (int userPlayer1);
+  void int SetGamer2 (int userPlayer2);
+  
+  private:
+  int userGamer;
+  int userPlayer1;
+  int userPlayer2;
 }
 
-void FunGame::ComputerRoll(string computerChoose)
+void FunGame::SetGamer1 (int userPlayer1)
 {
-    computerChoose=computerChoose;
+    SetGamer1=userPlayer1;
+    return;
+}
+
+void FunGame::SetGamer2 (int userPlayer2)
+{
+    SetGamer2=userPlayer2;
     return;
 }
 
@@ -32,45 +39,66 @@ void FunGame::SetGame () const
 
 int main ()
 {
-    string userCall;
     
-    FunGame game1;
-    FunGame game2;
-    FunGame game3;
+    string player1Choose;
+    string player2Choose;
     
-    cout << "In this game, its you against the computer playing ROCK, PAPER, SCISSORS." << endl;
-    cout << "Pick from your choices: rock, paper, scissors: " << endl;
-    cin >> userCall;
+    cout << "In this game, it is player vs. player in a game of ROCK, PAPER, SCISSORS. I hope you have fun playing against your friend." << endl;
     
-    cout << "How many games do you wanna play? 3, 5, or 7?" << endl;
-    cin >> userGames;
+    cout << "Player One choose: " << endl;
+    cin >> player1Choose;
     
-    if (userCAll == rock)
+    cout << "Player Two choose: " << endl;
+    cin >> player2Choose;
+    
+    if (player1Choose==rock && player2Choose==paper)
     {
-        cout << "Computer calls paper. Computer wins!" << endl;
-    }
-    else 
-    {
-        cout << "Computer calls scissors. You win!" << endl;
+        cout << "Player One wins!" << endl;
     }
     
-    if else (userCall==paper)
+    else if (player1Choose==paper && player2Choose==rock)
     {
-        cout << "Computer calls scissors. Computer wins." << endl;
-    }
-    else
-    {
-        cout << "Computer calls rock. You win!" << endl;
+        cout << "Player Two Wins!" << endl;
     }
     
-    else if (userCall==scissors) 
+    else if (player1Choose==rock && player2Choose==scissors)
     {
-        cout << "Computer calls rock. Computer wins." << endl;
-    }
-    else 
-    {
-        cout << "Computer calls paper. You win!" << endl;
+        cout << "Player One wins!" << endl;
     }
     
+    else if (player1Choose==scissors && player2Choose==rock)
+    {
+        cout << "Player Two wins!" << endl;
+    }
+    
+    else if (player1Choose==rock && player2Choose==scissors)
+    {
+        cout << "Player One wins!" << endl;
+    }
+    
+    else if (player1Choose==scissors && player2Choose==paper)
+    {
+        cout << "Player One wins!" << endl;
+    }
+    
+    else if (player1Choose==paper && player2Choose==scissors)
+    {
+        cout << "Player Two wins!" << endl;
+    }
+    
+    else if (player1Choose==rock && player2Choose==rock)
+    {
+        cout << "It's a draw. Play again."
+    }
+    
+    else if (player1Choose==paper && player2Choose==paper)
+    {
+        cout << "It's a draw. Play again."
+    }
+    
+    else if (player1Choose==scissors && player2Choose==scissors)
+    {
+        cout << "It's a draw. Play again."
+    }
     return 0;
 }
