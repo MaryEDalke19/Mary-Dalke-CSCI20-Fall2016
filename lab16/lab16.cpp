@@ -1,15 +1,31 @@
-//Mary Dalke
-//10-20-16
-//Menu program
+ //Mary Dalke
+//10-27-16
+//Menu program with prices
 
 #include <iostream>
 using namespace std;
+
+double calculateMenu(double menuItemPrice[], int menuItemInvetory)
+{
+    double itemPrice = 0.0;
+    int itemInvetory = 0;
+    i = 0;
+    
+    for (i = 0; i < menuItemInvetory; ++i)
+    {
+    itemPrice = itemPrice = menuItemPrice[i];
+    }
+    
+    return itemPrice / (menuItemInvetory - 1);
+}
 
 int main()
 {
     const int NUM_MENU = 10;
     char userPicks[NUM_MENU];
     int i = 0;
+    double averagePrices = 0.0;
+    
     
     userPicks[0] = 1;
     userPicks[1] = 2;
@@ -21,6 +37,12 @@ int main()
     userPicks[7] = 8;
     userPicks[8] = 9;
     userPicks[9] = 10;
+    
+    for (i = 0; i < NUM_MENU; ++i)
+    {
+        cout << "Item price: ";
+        cin >> userPicks[i];
+    }
     
     cout << "Pick what you want for dinner from the Italin Menu below." << endl;
     cout << "Do you want pizza(1), pasta(2), pane(3), riso(4), or soup(5)?" << endl;
