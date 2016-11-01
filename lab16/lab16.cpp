@@ -5,27 +5,14 @@
 #include <iostream>
 using namespace std;
 
-double calculateMenu(double menuItemPrice[], int menuItemInvetory)
-{
-    double itemPrice = 0.0;
-    int itemInvetory = 0;
-    i = 0;
-    
-    for (i = 0; i < menuItemInvetory; ++i)
-    {
-    itemPrice = itemPrice = menuItemPrice[i];
-    }
-    
-    return itemPrice / (menuItemInvetory - 1);
-}
-
+float division (float menuPrices[10], int menuInv);
 int main()
 {
     const int NUM_MENU = 10;
     char userPicks[NUM_MENU];
     int i = 0;
-    double averagePrices = 0.0;
-    
+    float menuPrices[10];
+    int menuInv;
     
     userPicks[0] = 1;
     userPicks[1] = 2;
@@ -38,56 +25,57 @@ int main()
     userPicks[8] = 9;
     userPicks[9] = 10;
     
-    for (i = 0; i < NUM_MENU; ++i)
-    {
-        cout << "Item price: ";
-        cin >> userPicks[i];
-    }
     
     cout << "Pick what you want for dinner from the Italin Menu below." << endl;
-    cout << "Do you want pizza(1), pasta(2), pane(3), riso(4), or soup(5)?" << endl;
-    cout << "Do you also want salad(6), pesce(7), verdura(8), carne(9), or antipasto(10)?" << endl;
+    cout << "Do you want pizza(type in 1) for $5.00 plus $0.50 per topping added, pasta(type in 2) for $6.00, pane(type in 3) for $6.50, riso(type in 4) for $7.00, or soup(type in 5) for $4.00?" << endl;
+    cout << "Do you also want salad(type in 6) for $4.00, pesce(type in 7) for $6.50, verdura(type in 8) for $7.00, carne(type in 9) for $6.50, or antipasto(type in 10) for $6.00?" << endl;
     cin >> userPicks[i];
+    
+    for (userPicks[i] = 0; userPicks[i] < menuInv; menuInv = menuInv - 1)
+    {
+        cout << "Input the price that you see above that you are paying for your food." << endl;
+        cin >> menuPrices;
+    }
     
     if (userPicks[i] == userPicks[0])
     {
-        cout << "You are having pizza for dinner." << endl;
+        cout << "You are having pizza for dinner and paying " << menuPrices << " plus $0.50 per topping." << endl;
     }
     else if (userPicks[i] == userPicks[1])
     {
-        cout << "You are having pasta for dinner." << endl;
+        cout << "You are having pasta for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[2])
     {
-        cout << "You are having pane for dinner." << endl;
+        cout << "You are having pane for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[3])
     {
-        cout << "You are having riso for dinner." << endl;
+        cout << "You are having riso for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[4])
     {
-        cout << "You are having soup for dinner." << endl;
+        cout << "You are having soup for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] ==  userPicks[5])
     {
-        cout << "You are having salad for dinner." << endl;
+        cout << "You are having salad for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[6])
     {
-        cout << "You are having pesce for dinner." << endl;
+        cout << "You are having pesce for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[7])
     {
-        cout << "You are having verdura for dinner." << endl;
+        cout << "You are having verdura for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[8])
     {
-        cout << "You are having carne for dinner." << endl;
+        cout << "You are having carne for dinner and paying " << menuPrices << "." << endl;
     }
     else if (userPicks[i] == userPicks[9])
     {
-        cout << "You are having antipasto for dinner." << endl;
+        cout << "You are having antipasto for dinner and paying " << menuPrices << "." << endl;
     }
     else
     {
