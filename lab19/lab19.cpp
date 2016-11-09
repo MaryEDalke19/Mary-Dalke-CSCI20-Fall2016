@@ -13,7 +13,6 @@ int main ()
     ifstream inFS;
     int fileNum1 = 0;
     int fileNum2 = 0;
-    fileNum[4][42];
     
     cout << "Opening file input.txt." << endl;
     
