@@ -7,7 +7,7 @@ using namespace std;
 
 
 // Function converts kilograms to pounds
-double KilogramsPoundsToPounds (int origKilograms, int origPounds) 
+double ToPounds (int origKilograms, int origPounds) 
 {
     
     int totPounds = 0; // Resulting pounds
@@ -19,7 +19,7 @@ double KilogramsPoundsToPounds (int origKilograms, int origPounds)
 }
 
 // Function converts pounds to kilograms
-double PoundsKilogramsToKilograms (int origPounds, int origKilograms) 
+double ToKilo (int origPounds, int origKilograms) 
 {
     int totKilograms = 0;
     
@@ -31,19 +31,18 @@ double PoundsKilogramsToKilograms (int origPounds, int origKilograms)
 
 int main () 
 {
-string userKilo;
-string userLbs;
+    int userKilo = 0;
+    int userLbs = 0;
     
     cout << "How many Kilograms do you have?" << endl;
     cin >> userKilo;
-    cout << endl;
     
-    cout << "How many pounds do you have?" << endl;
+    cout << "You have: " << (userKilo * ToKilo) << " kilograms." << endl;
+    
+    cout << "How many Pounds do you have?" << endl;
     cin >> userLbs;
-    cout << endl;
     
-    cout << "From kilograms to pounds, your answer is: " << userKilo * totPounds << endl;
-    cout << "From pounds to kilograms, your answer is: " << userLbs * totKilograms << endl;
+    cout << "You have: " << (userLbs * ToPounds) << " pounds." << endl;
     
     return 0;
 }
