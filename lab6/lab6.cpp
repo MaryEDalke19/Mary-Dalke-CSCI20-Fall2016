@@ -5,8 +5,10 @@
 #include <string>
 using namespace std;
 
-int main () 
+void PrintArt () 
 {
+    char artShape = '*';
+    
     string userFirst;
     string userLast;
     string userYear;
@@ -20,11 +22,16 @@ int main ()
     cout << "What year is it?" << endl;
     cin >> userYear;
     
-    cout << "*" << endl;
-    cout << "**" << endl;
-    cout << "*** Copyright " << userFirst << " " << userLast << " " << userYear << endl;
-    cout << "****" << endl;
-    cout << "*****" << endl;
+    cout << "  " << artShape << endl;
+    cout << " " << artShape << " " << artShape << endl;
+    cout << "" << artShape << "   " << artShape << " Copyright " << userFirst << " " << userLast << " " << userYear << endl;
+    cout << " " << artShape << " " << artShape << endl;
+    cout << "  " << artShape << endl;
+}
+
+int main () 
+{
+    PrintArt();
     
     return 0;
 }
