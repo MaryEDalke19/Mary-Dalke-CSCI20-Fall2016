@@ -7,7 +7,7 @@ using namespace std;
 class TemperatureConverter 
 {
     public:
-    void kelvin_ (int kelvinTemp);
+    void kelvin_(int kelvinTemp);
     void fahrenheit_ (int fahrenheitTemp);
     void celsius_ (int celsiusTemp);
     double getTemps () const;
@@ -20,19 +20,19 @@ class TemperatureConverter
 // "TemperatureConverter::" means kelvin_ is a TemperatureConverter member function
 void TemperatureConverter::kelvin_(int kelvinTemp) 
 {
-    kelvin_Temp = kelvinTemp;
+    kelvin_= kelvinTemp;
     return;
 }
 
 void TemperatureConverter::fahrenheit_(int fahrenheitTemp)
 {
-    fahrenheit_Temp = fahrenheitTemp;
+    fahrenheit_= fahrenheitTemp;
     return;
 }
 
 void TemperatureConverter::celsius_(int celsiusTemp)
 {
-    celsius_Temp = celsiusTemp;
+    celsius_= celsiusTemp;
     return;
 }
 
@@ -40,21 +40,26 @@ double TemperatureConverter::getTemps() const
 {
     return classTemp / (allTemp / 3600.0);
 }
-
-
-int main () 
+ 
+int main ()
 {
-    TemperatureConverter temp1;
-    TemperatureConverter temp2;
-    TemperatureConverter temp3;
+    TemperatureConverter temp1; //testing default constructor
+    //TemperatureConverter temp2(274); //testing overloaded constructor
     
-    temp1.kelvin_();
-    temp2.fahrenheit_();
-    temp3.celsius_();
+    temp1.PrintTemperatures();
+    temp2.PrintTemperatures();
     
-    cout << "The Kelvin temperature is: " << temp1.kalvin_() << endl;
-    cout << "The Fahrenheit temperature is: " << temp2.fahrenheit_() << endl;
-    cout << "The Celsius temperature is: " << temp3.celsius_() << endl;
+    temp1.SetTempFromKelvin(400.15); //testing mutator function
+    cout<<temp1.GetTempFromKelvin()<<endl;//testing accessor function
+    temp1.PrintTemperatures();
+    
+    temp2.SetTempFromCelsius(32); //testing other functions
+    cout<<temp2.GetTempAsCelsius()<<endl;
+    temp2.PrintTemperatures();
+    
+    temp2.SetTempFromFahrenheit(32);
+    cout<<temp2.GetTempAsFahrenheit()<<endl;
+    temp2.PrintTemperatures();
     
     return 0;
 }
