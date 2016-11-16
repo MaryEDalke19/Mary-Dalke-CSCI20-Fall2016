@@ -30,8 +30,10 @@ double YardsMilesToMiles (int origYards, int origMiles)
 
 int main () 
 {
-string userMiles;
-string userYards;
+int userMiles;
+int userYards;
+int totMiles = 1;
+int totYards = 1760;
     
     cout << "How many miles did you go?" << endl;
     cin >> userMiles;
@@ -41,8 +43,8 @@ string userYards;
     cin >> userYards;
     cout << endl;
     
-    cout << "From miles to yards, your answer is: " << userMiles * totYards << endl;
-    cout << "From yards to miles, your answer is: " << userYards * totMiles << endl;
+    cout << "From miles to yards, your answer is: " << (userMiles * totYards) << endl;
+    cout << "From yards to miles, your answer is: " << (userYards * totMiles) << endl;
     
     return 0;
 }
