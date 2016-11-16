@@ -5,7 +5,8 @@
 #include <string>
 using namespace std;
 
-struct {
+struct MakeAMonster
+{
     int MonsterStruct;
     string monName;
     string monHead;
@@ -16,10 +17,48 @@ struct {
 
 int main () 
 {
+    MakeAMonster monName1;
+    MakeAMonster monName2;
+    MakeAMonster monName3;
+    
+    monName1.MonsterStruct = OneMonster;
+    monName2.MonsterStruct = TwoMonster;
+    monName3.MonsterStruct = ThreeMonster;
+    
+    MakeAMonster monHead1;
+    MakeAMonster monHead2;
+    MakeAMonster monHead3;
+    
+    monHead1.MonsterStruct = Zombus;
+    monHead2.MonsterStruct = Skeleten;
+    monHead3.MonsterStruct = Normal;
+    
+    MakeAMonster monEyes1;
+    MakeAMonster monEyes2;
+    MakeAMonster monEyes3;
+    
+    monEyes1.MonsterStruct = Spritem;
+    monEyes2.MonsterStruct = Normal;
+    monEyes3.MonsterStruct = Huge;
+    
+    MakeAMonster monNose1;
+    MakeAMonster monNose2;
+    MakeAMonster monNose3;
+    
+    monNose1.MonsterStruct = None;
+    monNose2.MonsterStruct = Round;
+    monNose3.MonsterStruct = Square;
+    
+    MakeAMonster monMouth1;
+    MakeAMonster monMouth2;
+    MakeAMonster monMouth3;
+    
+    monMouth1.MonsterStruct = Normal;
+    monMouth2.MonsterStruct = Wackus;
+    monMouth3.MonsterStruct = None;
+    
     
     cout << "I am going to ask you a string of questions about a monster that you are going to create." << endl;
-    cout << "You can look at the spreadsheet for this assignment at the link below (note: you should type the whole web address into a new tab to find it.)." << endl;
-    cout << "file:///C:Users/mc146u17/Downloads/Monster%20Page.pdf" << endl;
     
     cout << "What is the name of your monster?" << endl;
     cin >> monName;
