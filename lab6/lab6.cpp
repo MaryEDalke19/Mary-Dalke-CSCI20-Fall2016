@@ -7,20 +7,22 @@ using namespace std;
 
 int main () 
 {
-    string userName;
+    string userFirst;
+    string userLast;
     string userYear;
     
-    cout << "What is your first and last name?" << endl;
-    cin >> userName;
-    cout << endl;
+    cout << "What is your first name?" << endl;
+    cin >> userFirst;
+    
+    cout << "What is your last name?" << endl;
+    cin >> userLast;
     
     cout << "What year is it?" << endl;
     cin >> userYear;
-    cout << endl;
     
     cout << "*" << endl;
     cout << "**" << endl;
-    cout << "*** Copyright" << userName << userYear << endl;
+    cout << "*** Copyright " << userFirst << " " << userLast << " " << userYear << endl;
     cout << "****" << endl;
     cout << "*****" << endl;
     
