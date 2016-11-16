@@ -8,15 +8,33 @@ using namespace std;
 struct MakeAMonster
 {
     int MonsterStruct;
+};
+
+int main () 
+{
     string monName;
     string monHead;
     string monEyes;
     string monNose;
     string monMouth;
-};
-
-int main () 
-{
+    
+    char OneMonster;
+    char TwoMonster;
+    char ThreeMonster;
+    
+    char Zombus;
+    char Skeleten;
+    char Normal;
+    
+    char Spritem;
+    char Huge;
+    
+    char None;
+    char Round;
+    char Square;
+    
+    char Wackus;
+    
     MakeAMonster monName1;
     MakeAMonster monName2;
     MakeAMonster monName3;
