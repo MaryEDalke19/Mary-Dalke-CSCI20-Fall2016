@@ -6,6 +6,7 @@
 #include <ios>
 #include <iomanip>
 #include <fstream>
+#include <cstring>
 #include <string>
 using namespace std;
 
@@ -40,8 +41,8 @@ double StudentAnswers::GetTeacherAnswer () const
 int main ()
 {
     ifstream inFS;
-    char fileNum1 = '';
-    char fileNum2 = '';
+    char fileNum1;
+    char fileNum2;
     string filename = "";
     StudentAnswers student1;
     string firstName;
@@ -72,8 +73,8 @@ int main ()
     inFS >> fileNum2;
     "fileNum1" == "fileNum2";
     cout << "Close both files. " << endl;
-    inFS.close(fileNum1);
-    inFS.close(FileNum2);
+    inFS.close();
+    inFS.close();
     
     cout << "FileNum1 output: " << fileNum1 << endl;
     cout << "FileNum2 output: " << fileNum2 << endl;
