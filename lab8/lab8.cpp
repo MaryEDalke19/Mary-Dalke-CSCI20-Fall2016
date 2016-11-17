@@ -33,7 +33,7 @@ int main ()
 {
     int userKilo = 0;
     int userLbs = 0;
-    int ToKilo = .453592;
+    double ToKilo = .453592;
     int ToPounds = 1;
     
     cout << "How many Kilograms do you have?" << endl;
