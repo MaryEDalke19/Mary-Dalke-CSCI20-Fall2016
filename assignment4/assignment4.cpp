@@ -43,41 +43,41 @@ int main ()
     ifstream inFS;
     char fileNum1;
     char fileNum2;
+    "fileNum1" == "fileNum2";
     string filename = "";
+    string filename1 = "";
     StudentAnswers student1;
-    string firstName;
-    string lastName;
     int userGrade = 0;
     
-    cout << "Enter filename: " << endl;
+    cout << "Enter the first filename: " << endl;
     cin >> filename;
-    
-    student1.SetGrade(100);
-    student1.SetStudentAnswers(23);
-    cout << "student1's grade: " << student1.GetTeacherAnswer();
     
     inFS.open("studentanswers.txt");
     if (!inFS.is_open())
     {
-        cout << "Could not open file 'studentanswers.txt'. " << endl;
+        cout << "Could not open file 'studentanswers.txt'." << endl;
     }
+    
+    inFS >> fileNum1;
+    
+    cout << "Enter the second filename: " << endl;
+    cin >> filename1;
     
     inFS.open("answerkey.txt");
     if (!inFS.is_open())
     {
-        cout << "Could not open file 'answerkey.txt'. " << endl;
+        cout << "Could not open file 'answerkey.txt'." << endl;
     }
     
-    cout << "Read the two files: " << endl;
-    inFS >> fileNum1;
     inFS >> fileNum2;
-    "fileNum1" == "fileNum2";
-    cout << "Close both files. " << endl;
-    inFS.close();
-    inFS.close();
     
-    cout << "FileNum1 output: " << fileNum1 << endl;
-    cout << "FileNum2 output: " << fileNum2 << endl;
+    cout << "File output: " << fileNum1 << endl;
+    
+    student1.SetGrade(100);
+    student1.SetStudentAnswers(23);
+
+    inFS.close();
+    inFS.close();
     
     int grades[11];
     grades[0] = 100;
