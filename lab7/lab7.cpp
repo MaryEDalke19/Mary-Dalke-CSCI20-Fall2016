@@ -7,7 +7,7 @@ using namespace std;
 
 void ChildrenSong (string songLyric, string songWord)
 {
-    cout << songLyric << ", " << songLyric <<  " on the range," << endl;
+    cout << songLyric << ", " << songLyric <<  " on the " << songWord << "," << endl;
     cout << "where the deer and the antelope play," << endl;
     cout << "where seldom is heard," << endl;
     cout << "a discouraging word," << endl;
@@ -17,7 +17,7 @@ void ChildrenSong (string songLyric, string songWord)
 
 int main () 
 {
-    ChildrenSong("home","");
+    ChildrenSong("home", "range");
     
     return 0;
 }
