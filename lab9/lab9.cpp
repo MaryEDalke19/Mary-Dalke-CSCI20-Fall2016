@@ -6,26 +6,83 @@ using namespace std;
 
 class TemperatureConverter 
 {
-    int SetTempFromCelsius;
-    int SetTempFromFahrenheit;
-    int SetTempFromKelvin;
-    int GetTempFromKelvin;
-    int GetTempAsCelsius;
-    int GetTempAsFahrenheit;
+ public:
+ void kelvin_(int kelvinTemp);
+ void celsius_(int celsiusTemp);
+ void fahrenheit_(int fahrenheitTemp);
+ double PrintTemperatures() const;
+ 
+ private:
+ int kelvin_Temp;
+ int temp1;
+ int temp2;
 };
 
-    TemperatureConverter PrintTemperatures (int kelvin_)
+void TemperatureConverter::kelvin_(int kelvinTemp)
 {
-    PrintTemperatures printTemp;
-    printTemp.SetTempFromCelsius = 32;
-    printTemp.SetTempFromFahrenheit = 32;
-    printTemp.SetTempFromKelvin = 400.15;
-    printTemp.GetTempAsFahrenheit = 0;
-    printTemp.GetTempAsCelsius = 0;
-    printTemp.GetTempFromKelvin = 0;
+    kelvin_Temp = kelvinTemp;
+    return;
 }
 
- 
+void TemperatureConverter::celsius_(int celsiusTemp)
+{
+    temp1 = celsiusTemp;
+    return;
+}
+
+void TemperatureConverter::fahrenheit_(int fahrenheitTemp)
+{
+    temp2 = fahrenheitTemp;
+    return;
+}
+
+double TemperatureConverter::PrintTemperatures() const
+{
+    return kelvin_Temp / (temp1 * temp2 / -273.16);
+}
+
+int SetTempFromKelvin(int newKelvin)
+{
+    return newKelvin;
+}
+
+int SetTempFromCelsius(int newCelsius)
+{
+    return newCelsius;
+}
+
+int SetTempFromFahrenheit(int newFahrenheit)
+{
+    return newFahrenheit;
+}
+
+int GetTempFromKelvin(int origKelvin)
+{
+    int totKelvin = 0;
+    
+    totKelvin = (origKelvin * 400.15);
+    
+    return origKelvin;
+}
+
+int GetTempFromCelsius(int origCelsius)
+{
+    int totCelsius = 0;
+    
+    totCelsius = (origCelsius * 32);
+    
+    return origCelsius;
+}
+
+int GetTempFromFahrenheit(int origFahrenheit)
+{
+    int totFahrenheit = 0;
+    
+    totFahrenheit = (origFahrenheit * 32);
+    
+    return origFahrenheit;
+}
+
 int main ()
 {
     TemperatureConverter temp1; //testing default constructor

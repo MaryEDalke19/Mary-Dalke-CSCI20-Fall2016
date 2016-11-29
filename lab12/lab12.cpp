@@ -24,42 +24,40 @@ int main ()
         cin >> userAnswer;
         if (userAnswer == "No")
         {
-        cout << "What kind of movies do you like? action or romance." << endl;
+        cout << "What kind of movies do you like? Action or Romance." << endl;
         cin >> userAnswer1;
         }
-        if (userAnswer1 == "action")
+        if (userAnswer1 == "Action")
         {
         cout << "I think we'll be good friends." << endl;
         }
-        else if (userAnswer1 == "romance")
+        else if (userAnswer1 == "Romance")
         {
         cout << "Sorry, we don't have a lot in common." << endl;
         }
         else if (userAnswer == "Yes")
         {
-        cout << "Do you like to run? yes or no." << endl;
+        cout << "Do you like to run? Maybe or Not." << endl;
         cin >> userAnswer2;
         }
-        if (userAnswer2 == "yes")
+        if (userAnswer2 == "Maybe")
         {
         cout << "Sorry, we don't have a lot in common." << endl;
         }
-        else if (userAnswer2 == "no")
+        else if (userAnswer2 == "Not really")
         {
         cout << "I think we'll be good friends." << endl;
         }
+        break;
         
         case 1:
-        if (userAnswer == "turtles")
-        {
-        cout << "Do you like work? YES or NO." << endl;
+        cout << "Do you like work? Sometimes or Always." << endl;
         cin >> userAnswer3;
-        }
-        if (userAnswer3 == "YES")
+        if (userAnswer3 == "Always")
         {
         cout << "Sorry, we don't have a lot in common." << endl;
         }
-        else if (userAnswer3 == "NO")
+        else if (userAnswer3 == "Sometimes")
         {
         cout << "I think we'll be good friends." << endl;
         }
