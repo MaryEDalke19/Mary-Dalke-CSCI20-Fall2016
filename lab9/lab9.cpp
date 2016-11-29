@@ -2,6 +2,7 @@
 // 9-28-16
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class TemperatureConverter 
@@ -13,10 +14,10 @@ class TemperatureConverter
  void SetTempFromCelsius(int newCelsius);
  void SetTempFromFahrenheit(int newFahrenheit);
  void GetTempFromKelvin(int origKelvin);
- double GetTempFromCelsius(int origCelsius);
- double GetTempFromFahrenheit(int origFahrenheit);
- double GetTempAsCelsius(int totCelsius);
- double GetTempAsFahrenheit(int totFahrenheit);
+ void GetTempFromCelsius(int origCelsius);
+ void GetTempFromFahrenheit(int origFahrenheit);
+ void GetTempAsCelsius(int totCelsius);
+ void GetTempAsFahrenheit(int totFahrenheit);
  
  
  private:
@@ -53,28 +54,21 @@ void TemperatureConverter::SetTempFromFahrenheit(int newFahrenheit)
 }
 
 void TemperatureConverter::GetTempFromKelvin(int origKelvin)
-{
-    int totKelvin = 0;
-    
-    totKelvin = (origKelvin * 400.15);
-    
-    return origKelvin;
+{    
+    origKelvin = kelvin_Temp;
+    return;
 }
 
-double TemperatureConverter::GetTempAsCelsius(totCelsius)
+void TemperatureConverter::GetTempAsCelsius(int totCelsius)
 {
-    int totCelsius = 0;
+    totCelsius = kelvin_Temp - 273.15;
     
-    totCelsius = (origCelsius * 32);
-    
-    return origCelsius;
+    return;
 }
 
-double TemperatureConverter::GetTempAsFahrenheit(totFahrenheit)
+void TemperatureConverter::GetTempAsFahrenheit(int totFahrenheit)
 {
-    int totFahrenheit = 0;
+    totFahrenheit = ((totCelsius * 9) / 5 + 32);
     
-    totFahrenheit = (origFahrenheit * 32);
-    
-    return origFahrenheit;
+    return;
 }
