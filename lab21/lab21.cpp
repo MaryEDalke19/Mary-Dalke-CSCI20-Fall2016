@@ -7,6 +7,8 @@
 #include <ctime>
 using namespace std;
 
+#include "makefile.cpp"
+
 class MyNumbers
 {
   public:
@@ -21,7 +23,7 @@ class MyNumbers
   int num_;
 };
 
-MyNumbers::MyNumbers() : num_(0) 
+MyNumbers::MyNumbers() : num_(1) 
 {
 }
 

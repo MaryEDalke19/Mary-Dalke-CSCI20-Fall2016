@@ -19,12 +19,12 @@ int main ()
    for (i = 0, i < printTime.size(); ++i)
    {
        currChar = printTime.at(i);
-       if (((currChar >= '0') &&  (currChar<='9') || (currChar == '-'))
+       if (((currChar >= '0') &&  (currChar<='9') || (currChar == '-')))
        {
            cout << currChar;
        }
-       else if ( ((currChar >= '1:00') && (currChar <= '2:59' )) ||
-                 ((currChar >= '1:00 pm') && (currChar <= '2:59 pm')) )
+       else if ( ((currChar >= 1) && (currChar <= 2.59 )) ||
+                 ((currChar >= 1) && (currChar <= 2.59)) )
                  {
                      cout << "15 minutes";
                  }
