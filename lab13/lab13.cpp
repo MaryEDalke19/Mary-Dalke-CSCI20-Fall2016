@@ -30,8 +30,8 @@ int main ()
     start_Minutes = 0;
     end_Minutes = 60;
     
-    
-    for (zeroMinutes = 0; zeroMinutes < manyMinutes; zeroMinutes++)
+    zeroMinutes = 0;
+    while (zeroMinutes < manyMinutes)
     {
         if (zeroMinutes < 10)
         {
@@ -41,9 +41,11 @@ int main ()
         {
             cout << oneHour << timeSpace << zeroMinutes << "pm" << endl;
         }
+    zeroMinutes++;
     }
     
-    for (zero_Minutes = 0; zero_Minutes < many_Minutes; zero_Minutes++)
+    zero_Minutes = 0;
+    while (zero_Minutes < many_Minutes)
     {
         if (zero_Minutes < 10)
         {
@@ -53,6 +55,7 @@ int main ()
         {
             cout << twoHours << timeSpace << zero_Minutes << "pm" << endl;
         }
+    zero_Minutes++;
     }
     
     cout << "Enter your starting hour:" << endl;
