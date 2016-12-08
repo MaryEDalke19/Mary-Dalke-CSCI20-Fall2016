@@ -16,7 +16,7 @@ int main ()
    cout << endl;
    
    cout << "Print only: ";
-   for (i = 0, i < printTime.size(); ++i)
+   for (i = 0; i < printTime.size(); ++i)
    {
        currChar = printTime.at(i);
        if (((currChar >= '0') &&  (currChar<='9') || (currChar == '-')))
