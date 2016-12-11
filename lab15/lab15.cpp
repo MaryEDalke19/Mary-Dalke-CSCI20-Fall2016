@@ -7,70 +7,68 @@ using namespace std;
 
 int main()
 {
-    const int NUM_MENU = 10;
-    char userPicks[NUM_MENU];
-    int i = 0;
+    int italianMenu[10];
+    int menuMeal = 0;
+   
+    italianMenu[0] = 1;
+    italianMenu[1] = 2;
+    italianMenu[2] = 3;
+    italianMenu[3] = 4;
+    italianMenu[4] = 5;
+    italianMenu[5] = 6;
+    italianMenu[6] = 7;
+    italianMenu[7] = 8;
+    italianMenu[8] = 9;
+    italianMenu[9] = 10;
     
-    userPicks[0] = 1;
-    userPicks[1] = 2;
-    userPicks[2] = 3;
-    userPicks[3] = 4;
-    userPicks[4] = 5;
-    userPicks[5] = 6;
-    userPicks[6] = 7;
-    userPicks[7] = 8;
-    userPicks[8] = 9;
-    userPicks[9] = 10;
-    
-    cout << "Pick what you want for dinner from the Italin Menu below." << endl;
-    cout << "Do you want pizza(1), pasta(2), pane(3), riso(4), or soup(5)?" << endl;
-    cout << "Do you also want salad(6), pesce(7), verdura(8), carne(9), or antipasto(10)?" << endl;
-    cin >> userPicks[i];
-    
-    if (userPicks[i] == userPicks[0])
-    {
-        cout << "You are having pizza for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[1])
-    {
-        cout << "You are having pasta for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[2])
-    {
-        cout << "You are having pane for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[3])
-    {
-        cout << "You are having riso for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[4])
-    {
-        cout << "You are having soup for dinner." << endl;
-    }
-    else if (userPicks[i] ==  userPicks[5])
-    {
-        cout << "You are having salad for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[6])
-    {
-        cout << "You are having pesce for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[7])
-    {
-        cout << "You are having verdura for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[8])
-    {
-        cout << "You are having carne for dinner." << endl;
-    }
-    else if (userPicks[i] == userPicks[9])
-    {
-        cout << "You are having antipasto for dinner." << endl;
-    }
-    else
-    {
-        cout << "Sorry, that's not on the menu. Please try again." << endl;
-    }
-    
+   
+   cout << "Enter what you want for dinner:" << endl;
+   cout << "Choice 1: pizza. Choice 2: pasta. Choice 3: pane. Choice 4: riso. Choice 5: soup." << endl;
+   cout << "Choice 6: salad. Choice 7: pesce. Choice 8: verdura. Choice 9: carne. Choice 10: antipasto." << endl;
+   cin  >> menuMeal;
+   
+   switch (menuMeal)
+   {
+       case 1:
+       cout << "You are having pizza." << endl;
+       break;
+       
+       case 2:
+       cout << "You are having pasta." << endl;
+       break;
+       
+       case 3:
+       cout << "You are having pane." << endl;
+       break;
+       
+       case 4:
+       cout << "You are having riso." << endl;
+       break;
+       
+       case 5:
+       cout << "You are having soup." << endl;
+       break;
+       
+       case 6:
+       cout << "You are having salad." << endl;
+       break;
+       
+       case 7:
+       cout << "You are having pesce." << endl;
+       break;
+       
+       case 8:
+       cout << "You are having verdura." << endl;
+       break;
+       
+       case 9:
+       cout << "You are having carne." << endl;
+       break;
+       
+       case 10:
+       cout << "You are having antipasto." << endl;
+       break;
+   }
+   
     return 0;
 }

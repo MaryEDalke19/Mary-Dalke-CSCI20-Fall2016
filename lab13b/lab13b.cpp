@@ -60,7 +60,7 @@ int main ()
     cout << "Enter your ending hour:" << endl;
     cin >> endHour;
     
-    for (startMinutes = 0; startMinutes < endMinutes; startMinutes++)
+    for (startMinutes = 0; startMinutes < endMinutes; startMinutes = startMinutes + 15)
     {
         if (startMinutes < 10)
         {
@@ -72,7 +72,7 @@ int main ()
         }
     }
     
-    for (start_Minutes = 0; start_Minutes < end_Minutes; start_Minutes++)
+    for (start_Minutes = 0; start_Minutes < end_Minutes; start_Minutes = start_Minutes + 15)
     {
         if (start_Minutes < 10)
         {

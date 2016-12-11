@@ -1,33 +1,22 @@
 //Mary Dalke
 //10-17-16
-//Grade average debug program
+//Multipling Numbers debug program
 
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main ()
 {
-    const int GRADE_AVERAGE = 10; //grade average of class
-    int userNum[GRADE_AVERAGE]; //user numbers
-    int i = 0; //loop index
+    int userNum = 0;
+    int i = 0;
     
-    cout << "Enter " << GRADE_AVERAGE << " number average." << endl;
-    for (i = 0; i < GRADE_AVERAGE; ++i)
-    {
-        cout << "Number: ";
-        cin >> userNum[i];
-    }
+    cout << "What is your number?" << endl;
+    cin >> userNum;
+    cout << endl;
     
-    for (i = 0; i < GRADE_AVERAGE; ++i)
+    for (i = 0; i <= 0; i++)
     {
-        userNum[i] = userNum[GRADE_AVERAGE - i];
-    }
-    
-    cout << endl << "New numbers ";
-    for (i = 0; i < GRADE_AVERAGE; ++i)
-    {
-        cout << userNum[i] << " ";
+    cout << "This is your number times 5: " << userNum * 5 << endl;
     }
     
     return 0;
