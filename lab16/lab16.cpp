@@ -5,82 +5,70 @@
 #include <iostream>
 using namespace std;
 
-float division (float menuPrices[10], int menuInv);
 int main()
 {
-    const int NUM_MENU = 10;
-    char userPicks[NUM_MENU];
-    int i = 0;
-    float menuPrices[10];
-    int menuInv;
+    int italianMenu[10];
+    int menuMeal = 0;
+   
+    italianMenu[0] = 1;
+    italianMenu[1] = 2;
+    italianMenu[2] = 3;
+    italianMenu[3] = 4;
+    italianMenu[4] = 5;
+    italianMenu[5] = 6;
+    italianMenu[6] = 7;
+    italianMenu[7] = 8;
+    italianMenu[8] = 9;
+    italianMenu[9] = 10;
     
-    userPicks[0] = 1;
-    userPicks[1] = 2;
-    userPicks[2] = 3;
-    userPicks[3] = 4;
-    userPicks[4] = 5;
-    userPicks[5] = 6;
-    userPicks[6] = 7;
-    userPicks[7] = 8;
-    userPicks[8] = 9;
-    userPicks[9] = 10;
-    
-    
-    cout << "Pick what you want for dinner from the Italin Menu below." << endl;
-    cout << "Do you want pizza(type in 1) for $5.00 plus $0.50 per topping added, pasta(type in 2) for $6.00, pane(type in 3) for $6.50, riso(type in 4) for $7.00, or soup(type in 5) for $4.00?" << endl;
-    cout << "Do you also want salad(type in 6) for $4.00, pesce(type in 7) for $6.50, verdura(type in 8) for $7.00, carne(type in 9) for $6.50, or antipasto(type in 10) for $6.00?" << endl;
-    cin >> userPicks[i];
-    
-    for (userPicks[i] = 0; userPicks[i] < menuInv; menuInv = menuInv - 1)
-    {
-        cout << "Input the price that you see above that you are paying for your food." << endl;
-        cin >> menuPrices;
-    }
-    
-    if (userPicks[i] == userPicks[0])
-    {
-        cout << "You are having pizza for dinner and paying " << menuPrices << " plus $0.50 per topping." << endl;
-    }
-    else if (userPicks[i] == userPicks[1])
-    {
-        cout << "You are having pasta for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[2])
-    {
-        cout << "You are having pane for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[3])
-    {
-        cout << "You are having riso for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[4])
-    {
-        cout << "You are having soup for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] ==  userPicks[5])
-    {
-        cout << "You are having salad for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[6])
-    {
-        cout << "You are having pesce for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[7])
-    {
-        cout << "You are having verdura for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[8])
-    {
-        cout << "You are having carne for dinner and paying " << menuPrices << "." << endl;
-    }
-    else if (userPicks[i] == userPicks[9])
-    {
-        cout << "You are having antipasto for dinner and paying " << menuPrices << "." << endl;
-    }
-    else
-    {
-        cout << "Sorry, that's not on the menu. Please try again." << endl;
-    }
-    
+   
+   cout << "Enter what you want for dinner:" << endl;
+   cout << "Choice 1: pizza ($5.00 plus $0.50 per toppings added). Choice 2: pasta ($6.00 plus $0.50 per toppings added). Choice 3: pane ($6.50). Choice 4: riso ($7.00). Choice 5: soup ($4.00)." << endl;
+   cout << "Choice 6: salad ($4.00). Choice 7: pesce ($6.50). Choice 8: verdura ($7.00). Choice 9: carne ($6.50). Choice 10: antipasto ($6.00)." << endl;
+   cin  >> menuMeal;
+   
+   switch (menuMeal)
+   {
+       case 1:
+       cout << "You are having pizza for $5.00 plus $0.50 per toppings added." << endl;
+       break;
+       
+       case 2:
+       cout << "You are having pasta for $6.00 plus $0.50 per toppings added." << endl;
+       break;
+       
+       case 3:
+       cout << "You are having pane for $6.50." << endl;
+       break;
+       
+       case 4:
+       cout << "You are having riso for $7.00." << endl;
+       break;
+       
+       case 5:
+       cout << "You are having soup for $4.00." << endl;
+       break;
+       
+       case 6:
+       cout << "You are having salad for $4.00." << endl;
+       break;
+       
+       case 7:
+       cout << "You are having pesce for $6.50." << endl;
+       break;
+       
+       case 8:
+       cout << "You are having verdura for $7.00." << endl;
+       break;
+       
+       case 9:
+       cout << "You are having carne for $6.50." << endl;
+       break;
+       
+       case 10:
+       cout << "You are having antipasto for $6.00." << endl;
+       break;
+   }
+   
     return 0;
 }
