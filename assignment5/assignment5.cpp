@@ -57,7 +57,7 @@ int main()
     
     
     const int COAT_COLOR = 4;
-    int userPicks1[COAT_COLOR] = {1, 2, 3, 4};
+    int userPicks1[COAT_COLOR] = {0, 1, 2, 3};
     
     const int EYE_COLOR = 5;
     int userPicks2[EYE_COLOR] = {1, 2, 3, 4, 5};
@@ -112,6 +112,8 @@ int main()
         
     cout << "Choose your horse's coat color: black(1), red(2), white(3), or brown(4)." << endl;
     cin >> userPicks1[COAT_COLOR];
+    cout << "You outputted: " << userPicks1[COAT_COLOR] << endl;
+    
     
     if (userPicks1[COAT_COLOR] == userPicks1[0])
     {
@@ -299,9 +301,9 @@ int main()
         cout << "Your horse's gender is " << horseGen << "." << endl;
         cout << "Your horse's face marking is " << horseFace << "." << endl;
         cout << "Does your horse have stockings on its hooves? " << horseHoof << "." << endl;
-        cout << "Your horse's mane and tail color is " << userPicks[MT_COLOR] << "." << endl;
-        cout << "Your horse's coat color is " << userPicks1[COAT_COLOR] << "." << endl;
-        cout << "Your horse's eye color is " << userPicks2[EYE_COLOR] << "." << endl;
+        cout << "Your horse's mane and tail color number is " << userPicks[MT_COLOR] << "." << endl;
+        cout << "Your horse's coat color number is " << userPicks1[COAT_COLOR] << "." << endl;
+        cout << "Your horse's eye color number is " << userPicks2[EYE_COLOR] << "." << endl;
     }
     
     else
