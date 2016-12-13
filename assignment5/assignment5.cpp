@@ -21,21 +21,24 @@ class HorseBreedPrices
 void HorseBreedPrices::SetArabianPrice(int arabPrice)
 {
     horsePrices = arabPrice;
+    return;
 }
 
 void HorseBreedPrices::SetQuarderPrice(int qtrPrice)
 {
     horsePrices = qtrPrice;
+    return;
 }
 
 void HorseBreedPrices::SetPaintPrice(int paintPrice)
 {
     horsePrices = paintPrice;
+    return;
 }
 
 double HorseBreedPrices::GetFullPrice();
 {
-    supplyPrice / ( horsePrices / 10000);
+    return supplyPrice / ( horsePrices / 10000);
 }
 
 int main()
@@ -50,7 +53,7 @@ int main()
     cout << "To start creating your horse, type in 'Yes'. When you are done, type in 'No'." << endl;
     cin >> linkStart;
     
-    while (linkStart = "Yes")
+    while (linkStart == "Yes")
     {
     
     HorseBreedPrices horseBreed1;
@@ -58,29 +61,13 @@ int main()
     HorseBreedPrices horseBreed3;
     
     const char MT_COLOR = 4;
-    char userPicks;
+    char userPicks[MT_COLOR] = {"black", "red", "grey", "brown"};
     
-    MT_COLOR[0] = '1';
-    MT_COLOR[1] = 2;
-    MT_COLOR[2] = 3;
-    MT_COLOR[3] = 4;
+    const char COAT_COLOR = 4;
+    char userPicks1[COAT_COLOR] = {"black", "red", "white", "brown"};
     
-    const int COAT_COLOR = 4;
-    int userPicks1 = 0;
-    
-    COAT_COLOR[0] = 1;
-    COAT_COLOR[1] = 2;
-    COAT_COLOR[2] = 3;
-    COAT_COLOR[3] = 4;
-    
-    const int EYE_COLOR = 5;
-    int userPicks2 = 0;
-    
-    EYE_COLOR[0] = 1;
-    EYE_COLOR[1] = 2;
-    EYE_COLOR[2] = 3;
-    EYE_COLOR[3] = 4;
-    EYE_COLOR[4] = 5;
+    const char EYE_COLOR = 5;
+    char userPicks2[EYE_COLOR] = {"black", "blue", "violet", "brown", "hazel"};
     
     cout << "What is your horse's name?" << endl;
     cin >> horseName;
@@ -88,7 +75,7 @@ int main()
     cout << "Choose your horse by typing in Arabian, Quarter, or Paint." << endl;
     cin >> chooseHorse;
     
-    if (chooseHorse = "Arabian")
+    if (chooseHorse == "Arabian")
     {
     
     horseBreed1.SetPrice(9000);
@@ -122,7 +109,7 @@ int main()
         cout << "Your horse's eye color is " << userPicks2 << "." << endl;
     }
     
-    if (chooseHorse = "Quarter")
+    if (chooseHorse == "Quarter")
     
     {
     horseBreed2.SetPrice(5000);
@@ -156,7 +143,7 @@ int main()
         cout << "Your horse's eye color is " << userPicks2 << "." << endl;
     }
     
-    if (chooseHorse = "Paint")
+    if (chooseHorse == "Paint")
     {
     
     horseBreed3.SetPrice(4000);
@@ -193,7 +180,7 @@ int main()
     cout << "If you want to play again: type in 'Yes'. If you don't, type in 'No'." << endl;
     cin >> linkStart;
     
-    if (linkStart = "No")
+    if (linkStart == "No")
     {
     cout << "Goodbye!" << endl;
     }

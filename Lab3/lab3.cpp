@@ -29,8 +29,8 @@ int main () {
     cin >> wordFood;
     
     cout << firstName << " is " << userAge << " years old. " <<endl;
-    cout << firstName << " can't wait to be " << secondNum << " so " << firstName << " can get a(n) " << wordAdj << " " << wordAnimal << " . " << endl;
-    cout << firstName << " wants to give the " << wordAnimal << " " << wordFood << " . " << endl;
+    cout << firstName << " can't wait to be " << secondNum << " so " << firstName << " can get a(n) " << wordAdj << " " << wordAnimal << ". " << endl;
+    cout << firstName << " wants to give the " << wordAnimal << " " << wordFood << ". " << endl;
     
     
     return 0;
