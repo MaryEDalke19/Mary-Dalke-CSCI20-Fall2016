@@ -23,8 +23,8 @@ int main()
     
    
    cout << "Enter what you want for dinner:" << endl;
-   cout << "Choice 1: pizza ($5.00 plus $0.50 per toppings added). Choice 2: pasta ($6.00 plus $0.50 per toppings added). Choice 3: pane ($6.50). Choice 4: riso ($7.00). Choice 5: soup ($4.00)." << endl;
-   cout << "Choice 6: salad ($4.00). Choice 7: pesce ($6.50). Choice 8: verdura ($7.00). Choice 9: carne ($6.50). Choice 10: antipasto ($6.00)." << endl;
+   cout << "Choice 1: pizza ($5.00 plus $0.50 per toppings added). Choice 2: pasta ($6.00 plus $0.50 per toppings added). Choice 3: pane ($6.50). Choice 4: riso ($7.00)." << endl;
+   cout << "Choice 5: soup ($4.00). Choice 6: salad ($4.00). Choice 7: pesce ($6.50). Choice 8: verdura ($7.00). Choice 9: carne ($6.50). Choice 10: antipasto ($6.00)." << endl;
    cin  >> menuMeal;
    
    switch (menuMeal)
