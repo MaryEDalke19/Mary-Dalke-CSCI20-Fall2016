@@ -11,8 +11,8 @@ class HorseBreedPrices
     public:
     void SetArabianPrice(int arabPrice);
     void SetQuarderPrice(int qtrPrice);
-    void SetPaintPrice(int paintPrice);
     double GetFullPrice() const;
+    
     private:
     int horsePrices;
     double supplyPrice;
@@ -21,24 +21,16 @@ class HorseBreedPrices
 void HorseBreedPrices::SetArabianPrice(int arabPrice)
 {
     horsePrices = arabPrice;
-    return;
 }
 
 void HorseBreedPrices::SetQuarderPrice(int qtrPrice)
 {
     horsePrices = qtrPrice;
-    return;
 }
 
-void HorseBreedPrices::SetPaintPrice(int paintPrice)
+double HorseBreedPrices::GetFullPrice() const
 {
-    horsePrices = paintPrice;
-    return;
-}
-
-double HorseBreedPrices::GetFullPrice();
-{
-    return supplyPrice / ( horsePrices / 10000);
+    supplyPrice / ( horsePrices / 10000);
 }
 
 int main()
@@ -60,26 +52,26 @@ int main()
     HorseBreedPrices horseBreed2;
     HorseBreedPrices horseBreed3;
     
-    const char MT_COLOR = 4;
-    char userPicks[MT_COLOR] = {"black", "red", "grey", "brown"};
+    const int MT_COLOR = 4;
+    int userPicks[MT_COLOR] = {1, 2, 3, 4};
     
-    const char COAT_COLOR = 4;
-    char userPicks1[COAT_COLOR] = {"black", "red", "white", "brown"};
     
-    const char EYE_COLOR = 5;
-    char userPicks2[EYE_COLOR] = {"black", "blue", "violet", "brown", "hazel"};
+    const int COAT_COLOR = 4;
+    int userPicks1[COAT_COLOR] = {1, 2, 3, 4};
+    
+    const int EYE_COLOR = 5;
+    int userPicks2[EYE_COLOR] = {1, 2, 3, 4, 5};
     
     cout << "What is your horse's name?" << endl;
     cin >> horseName;
     
-    cout << "Choose your horse by typing in Arabian, Quarter, or Paint." << endl;
+    cout << "Choose your horse by typing in Arabian or Quarter." << endl;
     cin >> chooseHorse;
     
     if (chooseHorse == "Arabian")
     {
     
-    horseBreed1.SetPrice(9000);
-    horseBreed1.SupplyPrice(500);
+    horseBreed1.SetArabianPrice(9000);
     
     cout << "Choose your horse's gender: mare, gelding, or stallion." << endl;
     cin >> horseGen;
@@ -91,63 +83,113 @@ int main()
     cin >> horseHoof;
     
     cout << "Choose your horse's mane and tail color: black(1), red(2), grey(3), or brown(4)." << endl;
-    cin >> userPicks;
-        
-    cout << "Choose your horse's coat color: black(1), red(2), white(3), or brown(4)." << endl;
-    cin >> userPicks1;
-        
-    cout << "Choose your horse's eye color: black(1), blue(2), violet(3), brown(4), or hazel(5)." << endl;
-    cin >> userPicks2;
-
-        cout << chooseHorse << " horse's cost: " << horseBreed1.GetFullPrice << endl;
-        cout << "Your horse is an " << chooseHorse << " and named " << horseName << "." << endl;
-        cout << "Your horse's gender is " << horseGen << "." << endl;
-        cout << "Your horse's face marking is " << horseFace << "." << endl;
-        cout << "Does your horse have stockings on its hooves? " << horseHoof << "." << endl;
-        cout << "Your horse's mane and tail color is " << userPicks << "." << endl;
-        cout << "Your horse's coat color is " << userPicks1 << "." << endl;
-        cout << "Your horse's eye color is " << userPicks2 << "." << endl;
+    cin >> userPicks[MT_COLOR];
+    
+    if (userPicks[MT_COLOR] == userPicks[0])
+    {
+        cout << "You picked black." << endl;
     }
     
-    if (chooseHorse == "Quarter")
-    
+    else if (userPicks[MT_COLOR] == userPicks[1])
     {
-    horseBreed2.SetPrice(5000);
-    horseBreed2.SupplyPrice(500);
-    
-    cout << "Choose your horse's gender: mare, gelding, or stallion." << endl;
-    cin >> horseGen;
-    
-    cout << "Choose your horse's face markings: none, strip, or star." << endl;
-    cin >> horseFace;
-    
-    cout << "Choose if you want stocking on your horse's hooves? Type in yes or no." << endl;
-    cin >> horseHoof;
-    
-    cout << "Choose your horse's mane and tail color: black(1), red(2), grey(3), or brown(4)." << endl;
-    cin >> userPicks;
-        
-    cout << "Choose your horse's coat color: black(1), red(2), white(3), or brown(4)." << endl;
-    cin >> userPicks1;
-        
-    cout << "Choose your horse's eye color: black(1), blue(2), violet(3), brown(4), or hazel(5)." << endl;
-    cin >> userPicks2;
-
-        cout << chooseHorse << " horse's cost: " << horseBreed2.GetFullPrice << endl;
-        cout << "Your horse is an " << chooseHorse << " and named " << horseName << "." << endl;
-        cout << "Your horse's gender is " << horseGen << "." << endl;
-        cout << "Your horse's face marking is " << horseFace << "." << endl;
-        cout << "Does your horse have stockings on its hooves? " << horseHoof << "." << endl;
-        cout << "Your horse's mane and tail color is " << userPicks << "." << endl;
-        cout << "Your horse's coat color is " << userPicks1 << "." << endl;
-        cout << "Your horse's eye color is " << userPicks2 << "." << endl;
+        cout << "You picked red." << endl;
     }
     
-    if (chooseHorse == "Paint")
+    else if (userPicks[MT_COLOR] == userPicks[2])
     {
+        cout << "You picked grey." << endl;
+    }
     
-    horseBreed3.SetPrice(4000);
-    horseBreed3.SupplyPrice(500);
+    else if (userPicks[MT_COLOR] == userPicks[3])
+    {
+        cout << "You picked brown." << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
+        
+    cout << "Choose your horse's coat color: black(1), red(2), white(3), or brown(4)." << endl;
+    cin >> userPicks1[COAT_COLOR];
+    
+    if (userPicks1[COAT_COLOR] == userPicks1[0])
+    {
+        cout << "You picked black." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[1])
+    {
+        cout << "You picked red." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[2])
+    {
+        cout << "You picked white." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[3])
+    {
+        cout << "You picked brown." << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
+        
+    cout << "Choose your horse's eye color: black(1), blue(2), violet(3), brown(4), or hazel(5)." << endl;
+    cin >> userPicks2[EYE_COLOR];
+    
+    if (userPicks2[EYE_COLOR] == userPicks2[0])
+    {
+        cout << "You picked black." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks[1])
+    {
+        cout << "You picked blue." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[2])
+    {
+        cout << "You picked violet." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[3])
+    {
+        cout << "You picked brown." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[4])
+    {
+        cout << "You picked hazel." << endl;
+        cout << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
+
+        cout << "Arabian horse's cost: $9000." << endl;
+        cout << "Your horse is a(n) Arabian and named " << horseName << "." << endl;
+        cout << "Your horse's gender is " << horseGen << "." << endl;
+        cout << "Your horse's face marking is " << horseFace << "." << endl;
+        cout << "Does your horse have stockings on its hooves? " << horseHoof << "." << endl;
+        cout << "Your horse's mane and tail color is " << userPicks[MT_COLOR] << "." << endl;
+        cout << "Your horse's coat color is " << userPicks1[COAT_COLOR] << "." << endl;
+        cout << "Your horse's eye color is " << userPicks2[EYE_COLOR] << "." << endl;
+    }
+    
+    else if (chooseHorse == "Quarter")
+    
+    {
+    horseBreed2.SetQuarderPrice(5000);
     
     cout << "Choose your horse's gender: mare, gelding, or stallion." << endl;
     cin >> horseGen;
@@ -159,22 +201,112 @@ int main()
     cin >> horseHoof;
     
     cout << "Choose your horse's mane and tail color: black(1), red(2), grey(3), or brown(4)." << endl;
-    cin >> userPicks;
+    cin >> userPicks[MT_COLOR];
+    
+    if (userPicks[MT_COLOR] == userPicks[0])
+    {
+        cout << "You picked black." << endl;
+    }
+    
+    else if (userPicks[MT_COLOR] == userPicks[1])
+    {
+        cout << "You picked red." << endl;
+    }
+    
+    else if (userPicks[MT_COLOR] == userPicks[2])
+    {
+        cout << "You picked grey." << endl;
+    }
+    
+    else if (userPicks[MT_COLOR] == userPicks[3])
+    {
+        cout << "You picked brown." << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
         
     cout << "Choose your horse's coat color: black(1), red(2), white(3), or brown(4)." << endl;
-    cin >> userPicks1;
+    cin >> userPicks1[COAT_COLOR];
+    
+    if (userPicks1[COAT_COLOR] == userPicks1[0])
+    {
+        cout << "You picked black." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[1])
+    {
+        cout << "You picked red." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[2])
+    {
+        cout << "You picked white." << endl;
+    }
+    
+    else if (userPicks1[COAT_COLOR] == userPicks1[3])
+    {
+        cout << "You picked brown." << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
         
     cout << "Choose your horse's eye color: black(1), blue(2), violet(3), brown(4), or hazel(5)." << endl;
-    cin >> userPicks2;
+    cin >> userPicks2[EYE_COLOR];
+    
+    if (userPicks2[EYE_COLOR] == userPicks2[0])
+    {
+        cout << "You picked black." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[1])
+    {
+        cout << "You picked blue." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[2])
+    {
+        cout << "You picked violet." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[3])
+    {
+        cout << "You picked brown." << endl;
+        cout << endl;
+    }
+    
+    else if (userPicks2[EYE_COLOR] == userPicks2[4])
+    {
+        cout << "You picked hazel." << endl;
+        cout << endl;
+    }
+    
+    else
+    {
+        cout << "This is not an option. Please try again." << endl;
+    }
 
-        cout << chooseHorse << " horse's cost: " << horseBreed3.GetFullPrice << endl;
-        cout << "Your horse is an " << chooseHorse << " and named " << horseName << "." << endl;
+        cout << "Quarter horse's cost: $5000." << endl;
+        cout << "Your horse is a(n) Quarter horse and named " << horseName << "." << endl;
         cout << "Your horse's gender is " << horseGen << "." << endl;
         cout << "Your horse's face marking is " << horseFace << "." << endl;
         cout << "Does your horse have stockings on its hooves? " << horseHoof << "." << endl;
-        cout << "Your horse's mane and tail color is " << userPicks << "." << endl;
-        cout << "Your horse's coat color is " << userPicks1 << "." << endl;
-        cout << "Your horse's eye color is " << userPicks2 << "." << endl;
+        cout << "Your horse's mane and tail color is " << userPicks[MT_COLOR] << "." << endl;
+        cout << "Your horse's coat color is " << userPicks1[COAT_COLOR] << "." << endl;
+        cout << "Your horse's eye color is " << userPicks2[EYE_COLOR] << "." << endl;
+    }
+    
+    else
+    {
+        cout << "Sorry, that is not an option. Please try again." << endl;
     }
     
     cout << "If you want to play again: type in 'Yes'. If you don't, type in 'No'." << endl;
@@ -182,6 +314,7 @@ int main()
     
     if (linkStart == "No")
     {
+    cout << endl;
     cout << "Goodbye!" << endl;
     }
     
